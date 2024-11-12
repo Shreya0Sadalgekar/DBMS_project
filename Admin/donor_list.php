@@ -67,13 +67,22 @@ include 'conn.php';
         }
         $offset = ($page - 1) * $limit;
         $count=$offset+1;
-        $sql= "select * from donor_details join blood where donor_details.donor_blood=blood.blood_id LIMIT {$offset},{$limit}";
+        //$sql= "select * from donor_details join blood where donor_details.donor_blood=blood.blood_id LIMIT {$offset},{$limit}";
+        //new here 
+        $sql = "SELECT donor_details.*, blood.blood_group, appointments.appointment_date, appointments.appointment_time
+        FROM donor_details 
+        JOIN blood ON donor_details.donor_blood = blood.blood_id
+        LEFT JOIN appointments ON donor_details.donor_id = appointments.donor_id
+        LIMIT {$offset}, {$limit}";
+
+
         $result=mysqli_query($conn,$sql);
         if(mysqli_num_rows($result)>0)   {
        ?>
 
        <div class="table-responsive">
       <table class="table table-bordered" style="text-align:center">
+
           <thead style="text-align:center">
           <th style="text-align:center">S.no</th>
           <th style="text-align:center">Name</th>
@@ -83,20 +92,31 @@ include 'conn.php';
           <th style="text-align:center">Gender</th>
           <th style="text-align:center">Blood Group</th>
           <th style="text-align:center">Address</th>
+          <th style="text-align:center">Medical History</th>
+          <th style="text-align:center">Appointment Date</th> <!-- New Column -->
+          <th style="text-align:center">Appointment Time</th> <!-- New Column -->
           <th style="text-align:center">Action</th>
+
           </thead>
           <tbody>
             <?php
             while($row = mysqli_fetch_assoc($result)) { ?>
           <tr>
-                  <td><?php echo $count++; ?></td>
-                  <td><?php echo $row['donor_name']; ?></td>
-                  <td><?php echo $row['donor_number']; ?></td>
-                  <td><?php echo $row['donor_mail']; ?></td>
-                  <td><?php echo $row['donor_age']; ?></td>
-                  <td><?php echo $row['donor_gender']; ?></td>
+                    <td><?php echo $count++; ?></td>
+                    <td><?php echo $row['donor_name']; ?></td>
+                    <td><?php echo $row['donor_number']; ?></td>
+                    <td><?php echo $row['donor_mail']; ?></td>
+                    <td><?php echo $row['donor_age']; ?></td>
+                    <td><?php echo $row['donor_gender']; ?></td>
                     <td><?php echo $row['blood_group']; ?></td>
                     <td><?php echo $row['donor_address']; ?></td>
+                    <td><?php echo $row['donor_medical_history']; ?></td>
+
+                    
+                    <!-- Display appointment details or show "Not Set" if no appointment is scheduled -->
+                    <td><?php echo isset($row['appointment_date']) ? $row['appointment_date'] : 'Not Set'; ?></td>
+                    <td><?php echo isset($row['appointment_time']) ? $row['appointment_time'] : 'Not Set'; ?></td>
+
                     <td id="he" style="width:100px">
                     <a style="background-color:aqua" href='delete.php?id=<?php echo $row['donor_id']; ?>'> Delete </a>
                 </td>
@@ -106,6 +126,7 @@ include 'conn.php';
       </table>
     </div>
     <?php } ?>
+
 
 
 

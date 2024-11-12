@@ -14,11 +14,11 @@
   }
 }
 .blue {
-    background: #347fd0;
+    background: #a6ddef;
 }
 
 .news {
-    box-shadow: inset 0 -15px 30px rgba(10,4,60,0.4), 0 5px 10px rgba(10,20,100,0.5);
+    box-shadow: inset 0 -15px 30px rgba(101, 186, 235, 0.4), 0 5px 10px rgba(101, 186, 235, 0.4);
        width: 100%;
        height:50px;
     margin-top:0px;
@@ -33,11 +33,11 @@
 
 .news span {
     float: left;
-    color: #fff;
+    color: #0d0101;
     padding: 9px;
     position: relative;
     top: 1%;
-    box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4);
+    box-shadow: inset 0 -15px 30px rgba(207, 32, 59, 0.4);
     font: 16px 'Raleway', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -webkit-user-select: none;
@@ -54,7 +54,7 @@
 </head>
 <body>
 <div class="news blue">
-<span style="background-color:#F60F0F;width:125px;height:50px">Latest Updates</span><span class="text1" ><marquee>First blood donation camp to be organised in Hisar By Varun in collabration with Blood Bank& Donation Management System on <b>01/09/2020 at Community Centre PLA.</b> Come and Be a Part of this Noble Cause :) </marquee></span>
+<span style="background-color:#e0d7ab;width:100px;height:50px">Key Facts</span><span class="text1" ><marquee>Right now, we need 15 million blood units yearly. However, the supply of blood from donors only provides 10 million blood units. <b>In order to close this gap, Come and Be a Part of this Noble Cause :) Lets Save Life </b> Conatact Us below. </marquee></span>
 </div>
 </body>
 </head>

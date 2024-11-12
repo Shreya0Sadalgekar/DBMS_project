@@ -7,11 +7,11 @@
 
 .header {
   overflow:hidden;
-  background-color: #333;
+  background-color:#c42f12; /* background color header */
   top: 0;
   width:100%;
   padding: 10px 5px;
-  color:#FF0404  ;
+  color:#39494a  ;
 }
 
 /* Style the header links */
@@ -31,12 +31,13 @@
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
-  color:#FF0404  ;
+  color:#fff  ; /* Heading 'Blood */
+  font-family: "Lucida Handwriting", Cursive;
 }
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  background-color: #ddd;
+  background-color: #fff; /*box after clicking on blood donation*/
   color: black;
 }
 
@@ -46,6 +47,7 @@
 /* Float the link section to the right */
 .header-right {
   float: right;
+  font-family: "Arial", sans-serif;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
@@ -61,8 +63,8 @@
 }
 /* Style the active/current link*/
 a.act{
-background: linear-gradient(to right, #fd746c 0%, #ff9068 100%);
-color: white;
+  background: linear-gradient(to right, #14aaf5 0%, #79e0f7 100%);
+  color: white;
 border-radius:30px;
 }
 a.logo2{

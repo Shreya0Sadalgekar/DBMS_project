@@ -16,8 +16,9 @@
 </head>
 <body>
   <div id="footer" >
-  <b><center>COPYRIGHT © 2020<br>
+  <b><center>COPYRIGHT © 2022<br>
   Blood Bank & Donation Management
+  DBMS PROJECT SEM 5
   <br>
   ALL RIGHTS RESERVED.
   </center>

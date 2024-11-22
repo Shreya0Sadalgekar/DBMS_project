@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
 <style>
@@ -14,7 +12,7 @@
   }
 }
 .blue {
-    background: #a6ddef;
+    background: #a6ddef; /*news*/
 }
 
 .news {
@@ -29,6 +27,12 @@
     -webkit-user-select: none;
 
 }
+
+
+.key-facts {
+    background-color: #aeed9a; /* Replace with your desired color */
+}
+
 
 
 .news span {
@@ -54,7 +58,7 @@
 </head>
 <body>
 <div class="news blue">
-<span style="background-color:#e0d7ab;width:100px;height:50px">Key Facts</span><span class="text1" ><marquee>Right now, we need 15 million blood units yearly. However, the supply of blood from donors only provides 10 million blood units. <b>In order to close this gap, Come and Be a Part of this Noble Cause :) Lets Save Life </b> Conatact Us below. </marquee></span>
+<span class="key-facts" style="background-color:#e6c281;width:100px;height:50px">Key Facts</span><span class="text1" ><marquee>Right now, we need 15 million blood units yearly. However, the supply of blood from donors only provides 10 million blood units. <b>In order to close this gap, Come and Be a Part of this Noble Cause :) Lets Save Life </b> Conatact Us below. </marquee></span>
 </div>
 </body>
 </head>

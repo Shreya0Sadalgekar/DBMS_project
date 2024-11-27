@@ -73,7 +73,10 @@ include 'conn.php';
         FROM donor_details 
         JOIN blood ON donor_details.donor_blood = blood.blood_id
         LEFT JOIN appointments ON donor_details.donor_id = appointments.donor_id
+        WHERE donor_status = 'active'
         LIMIT {$offset}, {$limit}";
+
+
 
 
         $result=mysqli_query($conn,$sql);
@@ -116,10 +119,13 @@ include 'conn.php';
                     <!-- Display appointment details or show "Not Set" if no appointment is scheduled -->
                     <td><?php echo isset($row['appointment_date']) ? $row['appointment_date'] : 'Not Set'; ?></td>
                     <td><?php echo isset($row['appointment_time']) ? $row['appointment_time'] : 'Not Set'; ?></td>
+                    <td><?php echo isset($row['donor_status']) ? $row['donor_status'] : 'Pending'; ?></td>
 
-                    <td id="he" style="width:100px">
-                    <a style="background-color:aqua" href='delete.php?id=<?php echo $row['donor_id']; ?>'> Delete </a>
-                </td>
+
+                  <td id="he" style="width:100px">
+                    <a style="background-color:aqua" href='delete.php?id=<?php echo $row['donor_id']; ?>'> Update </a>
+                  </td>
+
               </tr>
             <?php } ?>
           </tbody>

@@ -8,9 +8,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
   .navbar {
-    background-color: #333333  ;
+    background-color: #c91c1c  ;
     padding: 10px 10px;
-    color:#FF0404  ;
+    color:#FFFFFF  ;
   }
   .navbar a {
     float: left;
@@ -24,6 +24,8 @@
   .navbar-brand {
     font-size: 25px;
     font-weight: bold;
+    color: #f5f0f0;
+    font-family: "Lucida Handwriting", Cursive; 
 
   }
   .navbar a {
@@ -35,7 +37,7 @@
     float: none;
   }
    #qq:hover{
-    background-color:#E5E8E8 ;
+    background-color:#c91c1c ;
     border-radius: 5px;
   }
 }
@@ -46,7 +48,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" id="qq" href="dashboard.php" style="color:#F51A14;">Blood Bank & Donation Admin Panel</a>
+      <a class="navbar-brand" id="qq" href="dashboard.php" style="color:#f5f0f0;">Blood Bank & Donation Admin Panel</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
 

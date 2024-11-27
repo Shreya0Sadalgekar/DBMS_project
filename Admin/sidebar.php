@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   width: 210px;
-  background-color: #333333;
+  background-color: #ddeda6 ;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -26,7 +26,7 @@ body {
 
 .sidebar a {
   display: block;
-  color: white;
+  color: #576a7d;
   padding: 16px;
   text-decoration: none;
 }
@@ -53,7 +53,7 @@ div.content {
 }
 
 a.act {
-  background: linear-gradient(to right, #00C9FF 0%, #92FE9D 100%);
+  background: linear-gradient(to right, #f576b1 0%, #c676f5 100%);
   color: black;
   border-radius: 10px;
 }
@@ -72,8 +72,11 @@ a.act {
   <a href="dashboard.php" <?php if($active == 'dashboard') echo "class='act'"; ?>><span class="glyphicon glyphicon-dashboard"></span>&nbsp;&nbsp;Dashboard</a>
   <a href="add_donor.php" <?php if($active == 'add') echo "class='act'"; ?>><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Add Donor</a>
   <a href="donor_list.php" <?php if($active == 'list') echo "class='act'"; ?>><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Donor List</a>
-  <a href="query.php" <?php if($active == 'query') echo "class='act'"; ?>><span class="glyphicon glyphicon-check"></span>&nbsp;&nbsp;Check Contactus Query</a>
-  <a href="pages.php" <?php if($active == 'pages') echo "class='act'"; ?>><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Manage Pages</a>
+
+  <a href="donor_data.php" <?php if($active == 'donor_data') echo "class='act'"; ?>>
+    <span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Donor Data</a>
+  
+    <a href="pages.php" <?php if($active == 'pages') echo "class='act'"; ?>><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Manage Pages</a>
   <a href="update_contact.php" <?php if($active == 'contact') echo "class='act'"; ?>><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Update Contact Info</a>
   <a href="blood_inventory.php" <?php if($active == 'inventory') echo "class='act'"; ?>><span class="glyphicon glyphicon-tint"></span>&nbsp;&nbsp;Blood Inventory</a>
 </div>
